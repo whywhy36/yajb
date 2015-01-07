@@ -1,0 +1,165 @@
+zh-CN:
+  will_paginate:
+      next_label: "下一页"
+      page_entries_info:
+        multi_page: "正显示%{model}的第%{from}至第%{to}条记录(共%{count}条记录)"
+        multi_page_html: "正显示%{model}的第<b>%{from}</b>至第<b>%{to}</b>条记录(共<b>%{count}</b>条记录)"
+        single_page:
+          one: "正显示1条%{model}记录"
+          other: "正显示所有共%{count}条%{model}记录"
+          zero: "暂无%{model}记录"
+        single_page_html:
+          one: "正显示<b>1</b>条%{model}记录"
+          other: "正显示所有共<b>%{count}</b>条%{model}记录"
+          zero: "暂无%{model}记录"
+      page_gap: "…"
+      previous_label: "上一页"
+
+  devise:
+    confirmations:
+      confirmed: 您的帐号已经确认，请登录.
+      send_instructions: 几分钟后，您将收到确认帐号的电子邮件.
+      send_paranoid_instructions: 如果您的邮箱存在于我们的数据库中，您将收到一封确认账号的邮件.
+    failure:
+      already_authenticated: 您已经登录.
+      inactive: 您还没有激活帐户.
+      invalid: 邮箱或密码错误
+      last_attempt: 你还有多一次尝试正确的密码，过后你的帐户会被锁住
+      locked: 您的帐号已被锁定.
+      not_found_in_database: 邮箱或密码错误
+      timeout: 您已登录超时，请重新登录.
+      unauthenticated: 继续操作前请注册或者登录.
+      unconfirmed: 继续操作前请先确认您的帐号.
+    mailer:
+      confirmation_instructions:
+        subject: 确认信息
+      reset_password_instructions:
+        subject: 重置密码信息
+      unlock_instructions:
+        subject: 解锁信息
+    omniauth_callbacks:
+      failure: 因为%{reason}，所以您无法从%{kind}获得授权.
+      success: 成功地从%{kind}获得授权.
+    passwords:
+      no_token: 您暂时不能访问此页面。您需要通过密码重置邮件中的重置链接来访问此页面，如果您正是通过重置链接访问，请确定链接的正确性。
+      send_instructions: 几分钟后，您将收到重置密码的电子邮件.
+      send_paranoid_instructions: 如果您的邮箱存在于我们的数据库中，您将收到一封找回密码的邮件.
+      updated: 您的密码已修改成功，您现在已登录.
+      updated_not_active: 您的密码已修改成功.
+    registrations:
+      destroyed: 再见！您的帐户已成功注销。我们希望很快可以再见到您.
+      signed_up: 欢迎您！您已注册成功.
+      signed_up_but_inactive: 谢谢您！然而您的账号还未被激活，在这之前无法登陆。
+      signed_up_but_locked: 谢谢您！然而您的账号已被锁定，无法登陆。
+      signed_up_but_unconfirmed: 谢谢您！一封确认邮件已经发至您的邮箱，请点击其中的链接激活您的账号。
+      update_needs_confirmation: 新的账号信息已成功提交，一封确认邮件已经发至您的邮箱，请点击其中的链接以使您的新E-mail地址生效。
+      updated: 帐号资料更新成功.
+    sessions:
+      already_signed_out: 成功的登出
+      signed_in: 登录成功.
+      signed_out: 退出成功.
+    unlocks:
+      send_instructions: 几分钟后，您将收到一封解锁帐号的邮件.
+      send_paranoid_instructions: 如果您的邮箱存在于我们的数据库中，您将收到一封解锁账号的邮件.
+      unlocked: 您的帐号已成功解锁，您现在已登录.
+  errors:
+    messages:
+      already_confirmed: 已经确认，请重新登录.
+      confirmation_period_expired: 必须在 %{period} 以内确认，请重新申请
+      expired: 您已过期，请重新申请
+      not_found: 没有找到
+      not_locked: 未锁定
+      not_saved:
+        one: '因为1个错误导致此%{resource}保存失败:'
+        other: '因为%{count}个错误导致此%{resource}保存失败:'
+
+  admin:
+    dashboard:
+      title: '概览 Dashboard'
+      jobs:
+        total: '所有职位'
+        open: '开放的职位'
+        closed: '关闭的职位'
+      details: '查看详细'
+    settings:
+      title: '设置 Settings'
+
+  categories:
+    name: '分类'
+
+  jobs:
+    name: '职位投递'
+    messages:
+      empty: '还没有相关开放职位'
+    title: '职位'
+    posted: '投递时间'
+    status: '状态'
+
+
+  orgs:
+    name: '公司'
+    url: '主页'
+    count:
+      jobs: '所有职位'
+      open: '开放职位'
+    bind: '关联公司'
+
+  tags:
+    name: '标签'
+
+  types:
+    name: '类型'
+
+  common:
+    name: '名称'
+    back: '返回'
+    cancel: '取消'
+    edit: '编辑'
+    list: '列表'
+    new: '新建'
+    delete: '删除'
+    update: '更新'
+    save: '保存'
+    post: '投递职位'
+    show: '查看'
+    confirm: '确定要执行这个操作嘛？'
+    signin: '登陆'
+    register: '注册新用户'
+    text:
+      ago: '前'
+
+  layout:
+    admin: '管理'
+    types: '类型'
+    categories: '分类'
+    companies: '所有公司'
+    about: '关于'
+    buttons:
+      post: '投递新职位'
+      sign_out: '注销'
+      sign_in: '登陆'
+
+  customized_notice:
+    bind_org: '请先关联您的账号到一个公司或者团队。'
+    alert_bind: '请到管理界面中关联您的账号到一个公司。'
+    alert_already_bind: '您之前已经关联过公司了，请到管理界面中查看。'
+
+
+  jumbotron:
+    title:
+      欢迎大家来到 WORK@HOME
+    content:
+      这是一个免费的远程工作招聘平台。欢迎在这里投放您的远程工作招聘信息！
+    joinus:
+      开始投递职位
+
+  footer:
+    text: 联系
+    mail_text: 我们
+    mail: in1024days@gmail.com
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+<ol class="breadcrumb">
+  <li class="active">
+    <h4>
+      <strong><%= t 'orgs.name' %>:</strong>
+      <%= @org.name %>
+    </h4>
+  </li>
+</ol>
+
+<%= render 'shared/job_list' %>
+
+<div>
+    <% if can? :update, @org %>
+        <%= link_to t('common.edit'), edit_org_path(@org), :class => 'btn btn-primary' %>
+    <% end %>
+    <%= link_to t('common.back'), :back, :class => 'btn btn-default' %>
+</div>

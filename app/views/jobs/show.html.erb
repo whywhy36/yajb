@@ -1,0 +1,34 @@
+<div class="rows">
+  <h1 class="page-header">
+    <%= @job.title %>
+    <small><%= link_to @job.org.name, org_path(@job.org) %></small>
+  </h1>
+  <ol class="breadcrumb">
+    <li class="active">
+      <i class="fa fa-clock-o">
+        <%= "#{time_ago_in_words(@job.updated_at)}#{t 'common.text.ago'}" %>
+      </i>
+    </li>
+    <li>
+      <i class="fa fa-laptop">
+        <%= link_to @job.type.name, type_path(@job.type) %>
+      </i>
+    </li>
+    <li>
+      <i class="fa fa-terminal">
+        <%= link_to @job.category.name, category_path(@job.category) %>
+      </i>
+    </li>
+  </ol>
+  <p>
+    <%= simple_format @job.jd %>
+  </p>
+
+</div>
+
+<div data-no-turbolink>
+<% if can? :update, @job %>
+    <%= link_to t('common.edit'), edit_job_path(@job), :class => 'btn btn-primary' %>
+<% end %>
+<%= link_to t('common.back'), :back, :class => 'btn btn-default' %>
+</div>

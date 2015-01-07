@@ -1,0 +1,31 @@
+<ol class="breadcrumb">
+  <li class="active">
+    <h4><%= t 'common.list' %></h4>
+  </li>
+</ol>
+
+<div class="table-responsive">
+    <table class="table">
+      <thead>
+      <tr class="active">
+        <th><%= t 'common.name' %></th>
+        <th><%= t 'orgs.url' %></th>
+        <th>#<%= t 'orgs.count.jobs' %></th>
+        <th>#<%= t 'orgs.count.open' %></th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @orgs.each do |org| %>
+          <tr>
+            <td><%= link_to "#{org.name}", org_path(org) %></td>
+            <td><%= link_to "#{org.link}", org.link %></td>
+            <td><%= org.jobs.count  %></td>
+            <td><%= org.jobs.open.count  %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+</div>
+
+<%= will_paginate @orgs, renderer: BootstrapPagination::Rails%>

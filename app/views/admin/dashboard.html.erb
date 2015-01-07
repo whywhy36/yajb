@@ -1,0 +1,92 @@
+<ol class="breadcrumb">
+  <li class="active">
+    <h4><%= t 'admin.dashboard.title' %></h4>
+  </li>
+</ol>
+
+<div class="row placeholders">
+
+  <div class="col-xs-6 col-sm-4">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col-xs-3">
+            <i class="fa fa-tasks fa-5x"></i>
+          </div>
+          <div class="col-xs-9 text-right">
+            <div class="huge">
+              <%= @jobs.count %>
+            </div>
+            <div><%= t 'admin.dashboard.jobs.total' %></div>
+          </div>
+        </div>
+      </div>
+      <a href="<%= org_path(current_user.orgs.first, :all => true ) %>">
+        <div class="panel-footer">
+          <span class="pull-left"><%= t 'admin.dashboard.details' %></span>
+          <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+          <div class="clearfix"></div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="col-xs-6 col-sm-4">
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col-xs-3">
+            <i class="fa fa-tasks fa-5x"></i>
+          </div>
+          <div class="col-xs-9 text-right">
+            <div class="huge">
+              <%= @jobs.open.count %>
+            </div>
+            <div><%= t 'admin.dashboard.jobs.open' %></div>
+          </div>
+        </div>
+      </div>
+      <a href="<%= org_path(current_user.orgs.first) %>">
+        <div class="panel-footer">
+          <span class="pull-left"><%= t 'admin.dashboard.details' %></span>
+          <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+          <div class="clearfix"></div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="col-xs-6 col-sm-4">
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col-xs-3">
+            <i class="fa fa-tasks fa-5x"></i>
+          </div>
+          <div class="col-xs-9 text-right">
+            <div class="huge">
+              <%= @jobs.closed.count %>
+            </div>
+            <div><%= t 'admin.dashboard.jobs.closed' %></div>
+          </div>
+        </div>
+      </div>
+      <a href="<%= org_path(current_user.orgs.first, :only_closed => true) %>">
+        <div class="panel-footer">
+          <span class="pull-left"><%= t 'admin.dashboard.details' %></span>
+          <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+          <div class="clearfix"></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+
+<ol class="breadcrumb">
+  <li class="active">
+    <h4><%= t 'admin.dashboard.jobs.total' %></h4>
+  </li>
+</ol>
+<%= render 'shared/jobs_posted_by_me' %>

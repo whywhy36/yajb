@@ -1,0 +1,33 @@
+<% if @jobs.empty? %>
+    <h2> No job posted here yet.</h2>
+<% else %>
+    <div class="table-responsive" data-no-turbolink>
+      <table class="table">
+        <tr class="active">
+          <th width="25%"><%= t 'jobs.title' %></th>
+          <th width="10"><%= t 'categories.name' %></th>
+          <th width="10%"><%= t 'types.name' %></th>
+          <th width="15%"><%= t 'jobs.posted' %></th>
+          <th width="10%"><%= t 'jobs.status' %></th>
+          <th width="30"></th>
+        </tr>
+        <tbody>
+        <% @jobs.each do |job| %>
+            <tr>
+              <td><%= job.title %></td>
+              <td><%= job.category.name %></td>
+              <td><%= job.type.name %></td>
+              <td><%= "#{time_ago_in_words(job.updated_at)}#{t 'common.text.ago'}" %></td>
+              <td><%= job.status %></td>
+              <td>
+                <%= link_to t('common.edit'), edit_job_path(job), class: 'btn btn-success' %>
+                <%= link_to t('common.delete'), job, class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %>
+              </td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+<% end %>
+
+<%= will_paginate @jobs, renderer: BootstrapPagination::Rails%>

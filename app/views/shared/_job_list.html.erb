@@ -1,0 +1,27 @@
+<% if @jobs.empty? %>
+    <h2> <%= t 'jobs.messages.empty' %> </h2>
+<% else %>
+    <div class="table-responsive">
+      <table class="table">
+        <tr class="active">
+          <th width="70%"><%= t 'jobs.title' %></th>
+          <th width="15%"><%= t 'types.name' %></th>
+          <th width="15%"><%= t 'jobs.posted' %></th>
+        </tr>
+        <tbody>
+        <% @jobs.each do |job| %>
+            <tr>
+              <td>
+                <%= "#{job.org.name}" %> |
+                <%= link_to job.title, job %>
+              </td>
+              <td><%= job.type.name %></td>
+              <td><%= "#{time_ago_in_words(job.updated_at)}#{t 'common.text.ago'}" %></td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+<% end %>
+
+<%= will_paginate @jobs, renderer: BootstrapPagination::Rails%>

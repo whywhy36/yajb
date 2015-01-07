@@ -1,0 +1,29 @@
+<ol class="breadcrumb">
+  <li class="active">
+    <h4><%= t 'common.list' %></h4>
+  </li>
+</ol>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tags.each do |tag| %>
+      <tr>
+        <td><%= tag.name %></td>
+        <td><%= link_to t('common.show'), tag %></td>
+        <td><%= link_to t('common.edit'), edit_tag_path(tag) %></td>
+        <td><%= link_to t('common.delete'), tag, method: :delete, data: { confirm: t('common.confirm') } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tag', new_tag_path %>

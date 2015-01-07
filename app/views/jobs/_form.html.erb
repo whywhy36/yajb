@@ -1,0 +1,43 @@
+<%= form_for(@job) do |f| %>
+  <% if @job.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@job.errors.count, "error") %> prohibited this job from being saved:</h2>
+
+      <ul>
+      <% @job.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field"  data-no-turbolink>
+    <div class="form-group">
+      <%= f.label :title, t('jobs.title') %><br>
+      <%= f.text_field :title %><br>
+    </div>
+    <div class="form-group">
+      <%= f.label :type, t('types.name') %><br>
+      <%= f.collection_select :type_id, Type.all, :id, :name %><br>
+    </div>
+    <div class="form-group">
+      <%= f.label :category, t('categories.name') %><br>
+      <%= f.collection_select :category_id, Category.all, :id, :name %><br>
+    </div>
+    <div class="form-group">
+      <%= f.label :jd %><br>
+      <%= f.text_area :jd, :class => 'form-control ckeditor', :rows => 18 %><br>
+    </div>
+    <div class="form-group">
+      <%= f.label :status, t('jobs.status') %><br>
+      <%= f.select :status, options_for_select({'open' => 'open', 'closed' => 'closed'}, @job.status) %>
+    </div>
+  </div>
+
+  <div class="actions">
+    <%= f.submit t('common.post'), :class => 'btn btn-primary' %>
+    <%= link_to t('common.cancel'), jobs_path, :class => 'btn btn-default' %>
+  </div>
+<% end %>
+
+<%= javascript_include_tag() %>
