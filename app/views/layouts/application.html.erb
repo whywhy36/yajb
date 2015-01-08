@@ -15,14 +15,14 @@
             </div>
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <% if user_signed_in? %>
+                    <% if user_signed_in? %>
                     <li>
                       <%= link_to t('layout.admin'), admin_path %>
                     </li>
                 <% end %>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                    <%= t('layout.categories') %>
+                    <%= t('layout.types') %>
                     <span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu" role="menu">
@@ -35,7 +35,7 @@
                 </li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                    <%= t('layout.types') %>
+                    <%= t('layout.categories') %>
                     <span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu" role="menu">

@@ -131,7 +131,7 @@ zh-CN:
   layout:
     admin: '管理'
     types: '类型'
-    categories: '分类'
+    categories: '工作内容'
     companies: '所有公司'
     about: '关于'
     buttons:
@@ -156,7 +156,7 @@ zh-CN:
   footer:
     text: 联系
     mail_text: 我们
-    mail: in1024days@gmail.com
+    mail: only4remoteworks@gmail.com
 
 
 

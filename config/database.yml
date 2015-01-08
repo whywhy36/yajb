@@ -10,6 +10,8 @@ default: &default
   pool: 5
   timeout: 5000
   host: localhost
+  username: remoteworking
+  password: ca$hc0w1!
 
 development:
   <<: *default

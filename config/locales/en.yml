@@ -70,6 +70,10 @@ en:
     post: 'Post Job'
     show: 'Show'
     confirm: 'Are you sure?'
+    signin: 'Sign In'
+    register: 'Sign Up'
+    text:
+      ago: ' ago'
 
   layout:
     admin: 'Admin'
@@ -86,3 +90,16 @@ en:
     bind_org: 'You need bind to one Team/Org before any further action.'
     alert_bind: 'You need bind to one team or company first. Go to Admin panel to bind your organization.'
     alert_already_bind: 'You already bind to one team or company.'
+
+  jumbotron:
+    title:
+      Welcome to WORK@HOME
+    content:
+      You can post remote jobs here for free. Give us your feedback to make this site better.
+    joinus:
+      Post Job
+
+  footer:
+    text: Contact
+    mail_text: ' Us'
+    mail: only4remoteworks@gmail.com

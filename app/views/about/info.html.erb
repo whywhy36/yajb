@@ -1,13 +1,30 @@
-<div class="page-header">
-    <h2>关于 WORK@HOME</h2>
-</div>
-<p class="lead">
-  大家好，欢迎来到这里。这是一个免费的远程工作招聘平台，我利用业余时间做了这个网站，并会尽力把她运营好。
+<% if I18n.locale == 'zh-CN' %>
+    <div class="page-header">
+        <h2>关于 WORK@HOME</h2>
+    </div>
+    <p class="lead">
+      大家好，欢迎来到这里。这是一个免费的远程工作招聘平台，我利用业余时间做了这个网站，并会尽力把她运营好。
 
-  做这个网站的初衷就是想做一个优秀的远程工作招聘平台，当然，现在的这个版本还是很简陋的，我会尽力对这个网站进行快速迭代，根据大家的反馈
-  和实际需求来改进这个平台。这个网站是完全免费的，目前只面向远程工作招聘，希望本站对你有所帮助。
-</p>
+      做这个网站的初衷就是想做一个优秀的远程工作招聘平台，当然，现在的这个版本还是很简陋的，我会尽力对这个网站进行快速迭代，根据大家的反馈
+      和实际需求来改进这个平台。这个网站是完全免费的，目前只面向远程工作招聘，希望本站对你有所帮助。
+    </p>
 
-<p>
-  如果您有任何问题，欢迎和<%= mail_to 'in1024days@gmail.com', '我们'%>联系
-</p>
+    <p>
+      如果您有任何问题，欢迎和<%= mail_to 'only4remoteworks@gmail.com', '我们'%>联系
+    </p>
+<% else %>
+    <div class="page-header">
+      <h2>About WORK@HOME</h2>
+    </div>
+    <p class="lead">
+      Hi there, welcome to this job board. This site is only for remote job positions. I made this and will continue improving
+      this website in my spare time.
+
+      Remote job can be listed here for free. I will try my best to maintain this site and hope one day I can be one of the remote guys :-)
+    </p>
+
+    <p>
+      Please let <%= mail_to 'only4remoteworks@gmail.com', 'us'%> know if you have any question or suggestion. Thanks.
+    </p>
+
+<% end %>
