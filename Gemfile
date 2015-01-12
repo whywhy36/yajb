@@ -40,6 +40,9 @@ gem 'rails-i18n', '~> 4.0.0'
 gem 'ckeditor_rails'
 gem 'jquery-turbolinks'
 
+# use skylight as the monitoring system
+gem 'skylight'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
