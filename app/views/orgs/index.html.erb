@@ -21,7 +21,7 @@
       <% @orgs.each do |org| %>
           <tr>
             <td><%= link_to "#{org.name}", org_path(org) %></td>
-            <td><%= link_to "#{org.link}", org.link %></td>
+            <td><%= link_to "#{org.link}", url_with_protocol(org.link) %></td>
             <td><%= org.jobs.count  %></td>
             <td><%= org.jobs.open.count  %></td>
           </tr>
