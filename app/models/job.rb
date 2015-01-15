@@ -23,4 +23,8 @@ class Job < ActiveRecord::Base
   def closed?
     status == 'closed'
   end
+
+  def to_param
+    "#{id}-#{title}-#{org.name}".parameterize
+  end
 end

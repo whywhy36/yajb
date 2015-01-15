@@ -43,6 +43,9 @@ gem 'jquery-turbolinks'
 # use skylight as the monitoring system
 gem 'skylight'
 
+# For SEO purpose
+gem 'meta-tags'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
