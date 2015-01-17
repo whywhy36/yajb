@@ -2,7 +2,7 @@ class Job < ActiveRecord::Base
   scope :open,    -> { where(status: 'open') }
   scope :closed,  -> { where(status: 'closed') }
 
-  self.per_page = 3
+  self.per_page = 15
 
   validates :title, :presence => true
   validates :jd, :presence => true
